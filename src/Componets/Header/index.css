@@ -1,0 +1,53 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  background-color: #011425 !important;
+}
+
+.logo-title-mail-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+}
+
+.title {
+  font-size: 12px;
+  margin: 0;
+}
+
+.logo {
+  height: 40px;
+  object-fit: contain;
+}
+
+.title-mail {
+  font-size: 10px;
+  margin: 0px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 30px;
+  }
+  .title-mail {
+    font-size: 20px;
+  }
+  .logo {
+    height: 80px;
+  }
+}
+
+.free-samples-btn {
+  font-size: 20px;
+  height: 40px;
+  color: #011425;
+  border-radius: 5px;
+  border: double #5c7c89 4px;
+  cursor: pointer;
+  outline: none !important;
+}

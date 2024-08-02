@@ -1,0 +1,47 @@
+.research-lists-heading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
+  padding: 30px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: #64646f33 0 7px 29px 0;
+  width: 90%;
+}
+
+.research-list-heading {
+  margin-bottom: 30px;
+  color: #5c7c89;
+}
+
+.research-list-container {
+  padding: 0;
+  width: 100%;
+}
+
+.research-list-item {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #011425;
+}
+
+@media screen and (min-width: 768px) {
+  .research-lists-heading-container {
+    flex-direction: row;
+    height: 250px;
+    padding: 0 30px;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .research-list-heading {
+    font-size: 30px;
+  }
+  .research-list-item {
+    font-size: 22px;
+    text-align: left;
+  }
+}

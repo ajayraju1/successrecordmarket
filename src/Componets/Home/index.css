@@ -1,0 +1,71 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  padding-top: 50px;
+  min-height: 100vh;
+  color: #fff;
+  font-family: Roboto;
+}
+
+.home-heading {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.home-va-heading-con {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: #64646f33 0px 7px 29px 0px;
+}
+
+.va-heading {
+  font-size: 25px;
+}
+
+.va-heading {
+  color: #011425;
+}
+.va-btn {
+  background-image: url("https://thumb.ac-illust.com/8a/8a25bed2828d91d44ce3c8f66f1337f3_t.jpeg");
+  border: 0;
+  height: 150px;
+  width: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .home-container {
+    justify-content: center;
+  }
+
+  .home-heading {
+    font-size: 60px;
+  }
+  .home-va-heading-con {
+    display: flex;
+    align-items: center;
+    width: 90%;
+  }
+
+  .va-heading {
+    font-size: 35px;
+    width: 80%;
+  }
+
+  .va-btn {
+    height: 300px;
+    width: 50%;
+    background-size: contain;
+    font-size: 30px;
+    padding-right: 100px;
+  }
+}
