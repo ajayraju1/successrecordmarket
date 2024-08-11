@@ -1,0 +1,35 @@
+.prodcuts-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+  color: #000;
+}
+
+.products-heading {
+  font-weight: bold;
+  font-size: 45px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.products-sub-heading {
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.products-items-container {
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2%;
+  height: 62vh;
+  overflow-y: scroll;
+}

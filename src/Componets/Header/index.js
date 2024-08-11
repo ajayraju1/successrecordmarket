@@ -6,7 +6,7 @@ const Header = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-dark header-container">
     <div
       className="modal fade"
-      id="exampleModal3"
+      id="exampleModal"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModal3Label"
@@ -44,6 +44,45 @@ const Header = () => (
       </div>
     </div>
 
+    <div
+      className="modal fade"
+      id="exampleModal1"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModal3Label"
+      aria-hidden="true"
+    >
+      <div className="modal-dialog" role="document">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title" id="exampleModal3Label">
+              Enter Your Details
+            </h5>
+            <button
+              type="button"
+              className="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div className="modal-body"></div>
+          <div className="modal-footer">
+            <button
+              type="button"
+              className="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" className="btn btn-info text-light">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div className="logo-title-mail-container">
       <div className="navbar-brand m-0 text-center">
         <h5 className="title">SUCCESS RECORD MARKET</h5>
@@ -115,11 +154,20 @@ const Header = () => (
           type="button"
           className="btn btn-primary"
           data-toggle="modal"
-          data-target="#exampleModal3"
+          data-target="#exampleModal"
         >
-          FREE SAMPLES BUY NOW
+          FREE SAMPLES
         </button>
       </div>
+      <button
+        // className="free-samples-btn"
+        type="button"
+        className="btn btn-success ml-2 mt-md-0 mt-2 "
+        data-toggle="modal"
+        data-target="#exampleModal1"
+      >
+        BUY NOW
+      </button>
     </div>
   </nav>
 );

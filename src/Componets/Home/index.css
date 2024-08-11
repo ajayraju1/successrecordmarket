@@ -21,6 +21,8 @@
   border-radius: 8px;
   padding: 10px;
   box-shadow: #64646f33 0px 7px 29px 0px;
+  min-height: 200px;
+  font-weight: bold;
 }
 
 .va-heading {
@@ -31,15 +33,18 @@
   color: #011425;
 }
 .va-btn {
-  background-image: url("https://thumb.ac-illust.com/8a/8a25bed2828d91d44ce3c8f66f1337f3_t.jpeg");
+  background-image: url("../../assets/images/pngwing.com.png");
   border: 0;
-  height: 150px;
-  width: 200px;
-  background-repeat: no-repeat;
-  background-size: contain;
+  height: 90px;
+  width: 120px;
+  background-size: cover;
+  background-color: #00000000;
   color: #fff;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -62,10 +67,11 @@
   }
 
   .va-btn {
-    height: 300px;
-    width: 50%;
+    height: 120px;
+    width: 150px;
     background-size: contain;
-    font-size: 30px;
-    padding-right: 100px;
+    font-size: 13px;
+    text-align: center;
+    padding-right: 20px;
   }
 }
