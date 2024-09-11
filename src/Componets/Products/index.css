@@ -8,6 +8,20 @@
   color: #000;
 }
 
+.home-body-imgs {
+  height: 200px;
+  width: 90%;
+  margin-top: 20px;
+  border-radius: 20px;
+  object-fit: 100% 100%;
+  box-shadow: #00000059 0px 5px 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .home-body-imgs {
+    height: 300px;
+  }
+}
 .products-heading {
   font-weight: bold;
   font-size: 45px;
