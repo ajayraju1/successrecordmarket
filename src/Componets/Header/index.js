@@ -30,7 +30,7 @@ const Header = () => (
           <div className="modal-body">
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSe6QDBbnFbu6mNGkYazj6Jdw7YVqqOZZdTINMHxctaVrcatfw/viewform?embedded=true"
-              width="330"
+              width="100%"
               height="849"
               frameborder="0"
               marginheight="0"
