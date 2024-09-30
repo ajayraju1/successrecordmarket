@@ -16,7 +16,7 @@ const Header = () => (
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="exampleModal3Label">
-              Enter Your Details
+              Enter Details
             </h5>
             <button
               type="button"
