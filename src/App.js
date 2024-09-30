@@ -4,6 +4,7 @@ import Header from "./Componets/Header";
 import Home from "./Componets/Home";
 import Research from "./Componets/Research";
 import Products from "./Componets/Products";
+import AboutUs from "./Componets/AboutUs";
 import "./App.css";
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/research" element={<Research />} />
             <Route exact path="/products" element={<Products />} />
+            <Route exact path="/aboutus" element={<AboutUs />} />
           </Routes>
         </div>
       </div>

@@ -1,0 +1,50 @@
+.about-container {
+  padding: 20px;
+  color: #fff;
+}
+
+.about-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about-heading {
+  color: rgb(112, 192, 249);
+  margin: 20px 0;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.about-description {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.about-clients-container {
+  text-align: center;
+  background-color: #ffffff90;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.about-clients-desc {
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .about-img-txt-container {
+    display: flex;
+  }
+
+  .about-img {
+    order: 2;
+    width: 40%;
+    height: 500px;
+    margin-right: 50px;
+    object-fit: cover;
+  }
+}
