@@ -29,6 +29,7 @@ const Header = () => (
           </div>
           <div className="modal-body">
             <iframe
+              title="Free Samples Google form"
               src="https://docs.google.com/forms/d/e/1FAIpQLSe6QDBbnFbu6mNGkYazj6Jdw7YVqqOZZdTINMHxctaVrcatfw/viewform?embedded=true"
               width="100%"
               height="849"
