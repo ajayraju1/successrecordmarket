@@ -1,0 +1,139 @@
+.services-container {
+  padding: 4rem 2rem;
+  color: #fff;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.services-main-heading {
+  text-align: center;
+  color: #70c0f9;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.service-item {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.service-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-image-container {
+  flex: 1;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-image:hover {
+  transform: scale(1.05);
+}
+
+.service-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.service-title {
+  color: #70c0f9;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.service-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.learn-more-btn {
+  background: linear-gradient(135deg, #70c0f9 0%, #5a9fd4 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(112, 192, 249, 0.3);
+}
+
+.learn-more-btn:hover {
+  background: linear-gradient(135deg, #5a9fd4 0%, #70c0f9 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(112, 192, 249, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .service-item,
+  .service-item.reverse {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .service-image-container {
+    max-width: 100%;
+  }
+
+  .service-title {
+    font-size: 1.8rem;
+  }
+
+  .services-main-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    padding: 2rem 1rem;
+  }
+
+  .service-image {
+    height: 250px;
+  }
+
+  .service-title {
+    font-size: 1.5rem;
+  }
+
+  .service-description {
+    font-size: 1rem;
+  }
+
+  .learn-more-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

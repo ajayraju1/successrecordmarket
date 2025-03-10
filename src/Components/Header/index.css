@@ -1,0 +1,181 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #0f2027 0%,
+    #203a43 50%,
+    #2c5364 100%
+  ) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-title-mail-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+}
+
+.title {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: linear-gradient(to right, #fff, #70c0f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.logo {
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.title-mail {
+  font-size: 11px;
+  margin: 3px 0 0;
+  font-weight: 600;
+  text-align: center;
+  color: #70c0f9;
+}
+
+.nav-links-container {
+  display: flex;
+  gap: 5px;
+}
+
+.nav-link {
+  position: relative;
+  padding: 8px 15px !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.8) !important;
+  transition: color 0.3s ease !important;
+}
+
+.nav-link:hover {
+  color: #70c0f9 !important;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #70c0f9;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.custom-btn {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.free-samples-btn {
+  background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%) !important;
+  border: none !important;
+}
+
+.buy-now-btn {
+  background: linear-gradient(45deg, #11998e 0%, #38ef7d 100%) !important;
+  border: none !important;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none !important;
+  padding: 5px;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .title-mail {
+    font-size: 16px;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  .nav-link {
+    padding: 10px 20px !important;
+  }
+
+  .custom-btn {
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(15, 32, 39, 0.95);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-collapse.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button-container {
+    margin-top: 15px;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .custom-btn {
+    width: 100%;
+  }
+}

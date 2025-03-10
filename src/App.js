@@ -1,24 +1,32 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
-import Header from "./Componets/Header";
-import Home from "./Componets/Home";
-import Research from "./Componets/Research";
-import Products from "./Componets/Products";
-import AboutUs from "./Componets/AboutUs";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Home from "./Components/Home";
+import Research from "./Components/Research";
+import Products from "./Components/Products";
+import AboutUs from "./Components/AboutUs";
 import "./App.css";
+
 const App = () => {
+  const location = useLocation();
+
   return (
     <div className="app-container">
       <div className="responsive-container">
         <Header />
-        <div className="body-body">
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/research" element={<Research />} />
-            <Route exact path="/products" element={<Products />} />
-            <Route exact path="/aboutus" element={<AboutUs />} />
-          </Routes>
+        <div className="app-body">
+          <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/research" element={<Research />} />
+              <Route exact path="/products" element={<Products />} />
+              <Route exact path="/aboutus" element={<AboutUs />} />
+            </Routes>
+          </AnimatePresence>
         </div>
+        <Footer />
       </div>
     </div>
   );
