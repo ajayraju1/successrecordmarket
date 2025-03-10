@@ -11,6 +11,10 @@
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .hero-section {
   position: relative;
   width: 100%;
