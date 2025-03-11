@@ -25,7 +25,7 @@ const Header = () => {
           className="navbar-brand m-0 text-center"
         >
           <h5 className="title">SUCCESS RECORD MARKET</h5>
-          <p className="title-mail">simonpikesj@gmail.com</p>
+          <p className="title-mail">simonpikej@gmail.com</p>
         </motion.div>
 
         <motion.div

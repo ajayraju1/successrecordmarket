@@ -92,26 +92,22 @@ const Footer = () => {
         >
           <h3>Contact Us</h3>
           <div className="contact-info">
-            <p>
+            {/* <p>
               <i className="fas fa-phone"></i>
               <span>+1 (555) 123-4567</span>
-            </p>
+            </p> */}
             <p>
               <i className="fas fa-envelope"></i>
-              <span>info@example.com</span>
+              <span>simonpikej@gmail.com</span>
             </p>
             <p>
               <i className="fas fa-map-marker-alt"></i>
-              <span>
-                123 Real Estate Ave, Suite 100
-                <br />
-                Business City, ST 12345
-              </span>
+              <span>145 10th Ave, Miami, Florida 33172</span>
             </p>
           </div>
           <div className="social-links">
             <a
-              href="https://facebook.com/successrecordmarket"
+              href="https://www.facebook.com/profile.php?id=61559668961505"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
@@ -135,7 +131,7 @@ const Footer = () => {
               <i className="fab fa-linkedin-in"></i>
             </a>
             <a
-              href="https://instagram.com/successrecordmarket"
+              href="https://www.instagram.com/simonpikej/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"

@@ -230,21 +230,26 @@ const ContactUs = ({ formType }) => {
 
               <div className="form-group">
                 <label htmlFor="lead_type">Lead Type *</label>
-                <select
-                  id="lead_type"
-                  name="lead_type"
-                  value={formData.lead_type}
-                  onChange={handleChange}
-                  required
-                  className="lead-type-select"
-                >
-                  <option value="">Select Lead Type</option>
-                  {leadTypes.map((type) => (
-                    <option key={type} value={type}>
-                      {type}
-                    </option>
-                  ))}
-                </select>
+                <div className="custom-select-container">
+                  <select
+                    id="lead_type"
+                    name="lead_type"
+                    value={formData.lead_type}
+                    onChange={handleChange}
+                    required
+                    className="custom-select"
+                  >
+                    <option value="">Select Lead Type</option>
+                    {leadTypes.map((type) => (
+                      <option key={type} value={type}>
+                        {type}
+                      </option>
+                    ))}
+                  </select>
+                  <div className="select-arrow">
+                    <i className="fas fa-chevron-down"></i>
+                  </div>
+                </div>
                 {errors.lead_type && (
                   <div className="error-message">{errors.lead_type}</div>
                 )}
@@ -306,23 +311,23 @@ const ContactUs = ({ formType }) => {
           <i className="fas fa-map-marker-alt"></i>
           <div>
             <h4>Our Location</h4>
-            <p>123 Real Estate Avenue, Property City, 90210</p>
+            <p>145 10th Ave, Miami, Florida 33172</p>
           </div>
         </div>
 
-        <div className="contact-info-item">
+        {/* <div className="contact-info-item">
           <i className="fas fa-phone-alt"></i>
           <div>
             <h4>Phone Number</h4>
             <p>(123) 456-7890</p>
           </div>
-        </div>
+        </div> */}
 
         <div className="contact-info-item">
           <i className="fas fa-envelope"></i>
           <div>
             <h4>Email Address</h4>
-            <p>simonpikesj@gmail.com</p>
+            <p>simonpikej@gmail.com</p>
           </div>
         </div>
 
@@ -337,7 +342,7 @@ const ContactUs = ({ formType }) => {
 
         <div className="social-links">
           <a
-            href="https://facebook.com/successrecordmarket"
+            href="https://www.facebook.com/profile.php?id=61559668961505"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"
@@ -361,7 +366,7 @@ const ContactUs = ({ formType }) => {
             <i className="fab fa-linkedin-in"></i>
           </a>
           <a
-            href="https://instagram.com/successrecordmarket"
+            href="https://www.instagram.com/simonpikej/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"

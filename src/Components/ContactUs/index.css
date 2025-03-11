@@ -251,3 +251,54 @@
 .success-message p {
   color: rgba(255, 255, 255, 0.9);
 }
+
+/* Custom Select Styling */
+.custom-select-container {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #70c0f9;
+  box-shadow: 0 0 0 2px rgba(112, 192, 249, 0.3);
+}
+
+.custom-select:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.select-arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #70c0f9;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.custom-select:focus + .select-arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.custom-select option {
+  background-color: #1e3c72;
+  color: white;
+  padding: 12px;
+}
