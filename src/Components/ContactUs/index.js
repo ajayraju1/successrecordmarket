@@ -99,14 +99,14 @@ const ContactUs = ({ formType }) => {
     const emailConfig =
       formType === "freeSamples"
         ? {
-            serviceId: "YOUR_FREE_SAMPLES_SERVICE_ID",
-            templateId: "YOUR_FREE_SAMPLES_TEMPLATE_ID",
-            publicKey: "YOUR_FREE_SAMPLES_PUBLIC_KEY",
+            serviceId: "successRecordMarketId",
+            templateId: "successRecordMarketSamp",
+            publicKey: "tjSGet-caOcTVhpgy",
           }
         : {
-            serviceId: "service_n2ya97f",
-            templateId: "template_xba74ik",
-            publicKey: "uzyhU6Dyy0dxcfw_l",
+            serviceId: "successRecordMarketId",
+            templateId: "successRecordMarketBuy",
+            publicKey: "tjSGet-caOcTVhpgy",
           };
 
     emailjs
