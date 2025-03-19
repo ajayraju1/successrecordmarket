@@ -157,8 +157,7 @@ const Footer = () => {
         transition={{ duration: 0.5, delay: 0.4 }}
       >
         <p>
-          &copy; {new Date().getFullYear()} Success Record Market. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} REAL LEADS . All rights reserved.
         </p>
       </motion.div>
     </footer>

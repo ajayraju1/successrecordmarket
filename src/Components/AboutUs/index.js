@@ -52,7 +52,7 @@ const AboutUs = () => {
         />
 
         <div className="about-txt-container">
-          <h1 className="about-heading">About Success Record Market</h1>
+          <h1 className="about-heading">About Real Leads</h1>
           <p className="about-description">
             We provide research and back office support services to realtors,
             investors, and wholesalers. These include lead generation, skip
@@ -80,7 +80,7 @@ const AboutUs = () => {
             throughout the nation to generate the best possible matches. We test
             our data to insure quality and accuracy for our clients. At{" "}
             <a href="https://success-record-market.netlify.app">
-              SuccessRecordMarket.com
+              RealLeads.com
             </a>{" "}
             we provide services to some of the most successful real estate
             professionals, investors, lenders.

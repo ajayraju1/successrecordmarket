@@ -1,6 +1,7 @@
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 15px 20px;
   width: 100%;
   background: linear-gradient(
@@ -14,7 +15,12 @@
   top: 0;
   z-index: 1000;
 }
-
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+}
 .logo-title-mail-container {
   display: flex;
   align-items: center;
