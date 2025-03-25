@@ -109,18 +109,35 @@ const ContactUs = ({ formType }) => {
             publicKey: "5VGmhJ5j6vhfuViIY",
           };
 
+    // Google Form configuration with correct entry IDs based on form type
+    const GOOGLE_FORM =
+      formType === "freeSamples"
+        ? {
+            // Free Samples form
+            formId: "1FAIpQLScAnIWnCaRwd_C29M4pHk4ptnOdWVPiYpgqAubIlkFUl-eoEA",
+            nameId: "entry.1501439427",
+            emailId: "entry.176699056",
+            messageId: "entry.2099938279",
+            countryId: "entry.1545010863",
+            leadTypeId: "entry.762985228",
+          }
+        : {
+            // Buy Now form
+            formId: "1FAIpQLSdSqiBJx81UxGpCkdZprOOKuBeCGuMiXSHuT7xzgu9x4pnNbw",
+            nameId: "entry.2005620554",
+            emailId: "entry.1045781291",
+            messageId: "entry.839337160",
+          };
+
+    // Send to EmailJS
     emailjs
       .sendForm(emailConfig.serviceId, emailConfig.templateId, form.current, {
         publicKey: emailConfig.publicKey,
       })
       .then(
         () => {
-          setFormStatus({
-            submitting: false,
-            submitted: true,
-            error: null,
-          });
-          form.current.reset();
+          // After successful EmailJS submission, send to Google Forms
+          submitToGoogleForm(GOOGLE_FORM);
         },
         (error) => {
           setFormStatus({
@@ -131,6 +148,66 @@ const ContactUs = ({ formType }) => {
           console.error("FAILED..", error.text);
         }
       );
+  };
+
+  // Function to submit to Google Forms
+  const submitToGoogleForm = (formConfig) => {
+    const formUrl = `https://docs.google.com/forms/d/e/${formConfig.formId}/formResponse`;
+
+    // Prepare form data for Google Form
+    const googleFormData = new FormData();
+    googleFormData.append(formConfig.nameId, formData.user_name);
+    googleFormData.append(formConfig.emailId, formData.user_email);
+    googleFormData.append(formConfig.messageId, formData.message);
+
+    // Add conditional fields based on form type
+    if (
+      formType === "freeSamples" &&
+      formConfig.countryId &&
+      formConfig.leadTypeId
+    ) {
+      googleFormData.append(formConfig.countryId, formData.country);
+      googleFormData.append(formConfig.leadTypeId, formData.lead_type);
+    }
+
+    // Use fetch to submit the form
+    fetch(formUrl, {
+      method: "POST",
+      mode: "no-cors", // Important for cross-origin requests to Google Forms
+      body: googleFormData,
+    })
+      .then(() => {
+        setFormStatus({
+          submitting: false,
+          submitted: true,
+          error: null,
+        });
+        form.current.reset();
+        setFormData({
+          user_name: "",
+          user_email: "",
+          country: "",
+          lead_type: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error("Google Form submission failed:", error);
+        // Still mark as successful if only Google Form fails but EmailJS succeeded
+        setFormStatus({
+          submitting: false,
+          submitted: true,
+          error: null,
+        });
+        form.current.reset();
+        setFormData({
+          user_name: "",
+          user_email: "",
+          country: "",
+          lead_type: "",
+          message: "",
+        });
+      });
   };
 
   if (formStatus.submitted) {
