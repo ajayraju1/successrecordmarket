@@ -128,7 +128,7 @@ const ContactUs = ({ formType }) => {
             submitted: false,
             error: "Failed to send message. Please try again.",
           });
-          console.error("FAILED...", error.text);
+          console.error("FAILED..", error.text);
         }
       );
   };
