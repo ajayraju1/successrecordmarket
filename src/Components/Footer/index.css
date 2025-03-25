@@ -115,6 +115,20 @@
   font-size: 0.9rem;
 }
 
+.footer-logo-container {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 15px;
+}
+
+.footer-logo {
+  height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  border-radius: 100px;
+}
+
 @media (max-width: 768px) {
   .footer {
     padding: 3rem 1rem 1rem;
@@ -131,5 +145,11 @@
 
   .social-links {
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-logo {
+    height: 70px;
   }
 }

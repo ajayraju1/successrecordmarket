@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./index.css";
+import logo from "../../assets/images/logo.png";
 
 const Footer = () => {
   return (
@@ -14,6 +15,16 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
         >
           <h3>About Us</h3>
+          <motion.div
+            whileHover={{ rotate: 5, scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+            className="footer-logo-container"
+          >
+            <Link to="/">
+              <img src={logo} className="footer-logo" alt="logo" />
+            </Link>
+          </motion.div>
+
           <p>
             We specialize in providing comprehensive real estate solutions with
             expert research and data analysis to help our clients make informed
