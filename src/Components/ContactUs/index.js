@@ -101,12 +101,12 @@ const ContactUs = ({ formType }) => {
         ? {
             serviceId: "realLeadsId",
             templateId: "realLeadsSamp",
-            publicKey: "tjSGet-caOcTVhpgy",
+            publicKey: "5VGmhJ5j6vhfuViIY",
           }
         : {
             serviceId: "realLeadsId",
             templateId: "realLeadsBuy",
-            publicKey: "tjSGet-caOcTVhpgy",
+            publicKey: "5VGmhJ5j6vhfuViIY",
           };
 
     emailjs
