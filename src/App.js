@@ -7,6 +7,7 @@ import Home from "./Components/Home";
 import Research from "./Components/Research";
 import Products from "./Components/Products";
 import AboutUs from "./Components/AboutUs";
+import LeadTypesPage from "./Components/LeadTypes";
 import "./App.css";
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
               <Route exact path="/research" element={<Research />} />
               <Route exact path="/products" element={<Products />} />
               <Route exact path="/aboutus" element={<AboutUs />} />
+              <Route exact path="/lead-types" element={<LeadTypesPage />} />
             </Routes>
           </AnimatePresence>
         </div>

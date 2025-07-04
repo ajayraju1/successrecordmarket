@@ -80,6 +80,13 @@ const Header = () => {
             >
               About Us
             </Link>
+            <Link
+              className="nav-link"
+              to="/lead-types"
+              onClick={() => setIsOpen(false)}
+            >
+              Lead Types
+            </Link>
           </motion.div>
 
           <motion.div
