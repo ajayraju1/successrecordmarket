@@ -1,3 +1,30 @@
 @import "../Products/index.css";
 
 /* You can add LeadTypes-specific overrides here if needed */
+
+/* LeadTypes-specific overrides for banner-style images */
+.product-icon-container {
+  background: rgba(255, 255, 255, 0.15);
+  width: 100% !important;
+  height: 120px !important;
+  border-radius: 12px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.product-icon {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  filter: none !important;
+  border-radius: 12px;
+}
+
+.product-card:hover .product-icon-container {
+  transform: scale(1.02);
+  background: rgba(112, 192, 249, 0.2);
+}
